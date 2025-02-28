@@ -24,7 +24,7 @@ $margin-default: map-get($spaces, "2") map-get($spaces, "0");
 
 // Update some of Bulma's component & color variables
 $footer-padding: 3rem 1.5rem;
-$link: hsl(171, 100%, 41%);
+$link: hsl(207, 100%, 41%);
 
 // Custom Styles
 .card-gap {
@@ -36,8 +36,11 @@ $link: hsl(171, 100%, 41%);
 a.icon > strong {
   margin-left: 0.25rem;
 }
+// .modal-card-body div.content {
+//   margin: $margin-default;
+// }
 .modal-card-body div.content {
-  margin: $margin-default;
+  margin: 0;
 }
 
 // import everything - alternatively import just what you need: https://bulma.io/documentation/overview/modular/
@@ -48,8 +51,135 @@ a.icon > strong {
   padding: 2.15rem 1.5rem;
 }
 
-@function theme-color($key: "primary") {
-  @return map-get($theme-colors, $key);
+/* Default Styles for Mobile */
+.modal-card-body {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically on mobile */
+  justify-content: flex-start;
+  padding: 1rem; /* Optional padding */
+}
+
+.tag {
+  background: #1f1f1f;
+  color: aquamarine;
+}
+
+.carousel {
+  width: 100%; /* Carousel takes full width on mobile */
+  margin-bottom: 1rem; /* Space between carousel and tags */
+}
+
+.tags {
+  width: 100%; /* Tags take full width on mobile */
+  margin-bottom: 1rem; /* Space between tags and content */
+}
+
+.content {
+  width: 100%; /* Content takes full width on mobile */
+  padding: 0; /* Remove any unnecessary padding */
+  margin-top: 0; /* Remove extra margin-top */
+  flex-grow: 1; /* Allow content to grow */
+  overflow-y: auto; /* Make content scrollable */
+  margin-bottom: 1rem; /* Space between content and the footer */
+}
+
+/* Tablet and Larger Screens */
+@media (min-width: 768px) {
+  .modal-card,
+  .modal-content {
+    margin: 0 auto;
+    max-height: 60%;
+    width: 50%; /* 80% width for modal */
+  }
+
+  .modal-card-body {
+    display: grid; /* Use grid for two-column layout */
+    grid-template-columns: 45% 50%; /* Left column (carousel + tags) and right column (content) */
+    grid-gap: 1rem; /* Space between the columns */
+  }
+
+  /* Left column (carousel + tags) */
+  .carousel {
+    grid-row: 1 / 2;
+    // margin-bottom: 1rem; /* Space between carousel and tags
+  }
+
+  /* Right column (content) */
+  .content {
+    position: relative;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    overflow-y: auto; /* Make content scrollable */
+    max-height: calc(
+      100vh - 40px
+    ); /* Ensure content doesn't overflow the modal */
+    // margin-top: 0; /* Ensure no additional spacing above content */
+    padding: 0.5rem; /* Add some padding around content */
+    padding-top: 0; /* Remove padding-top if it's causing extra space */
+  }
+
+  .carousel-cell {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+}
+// Custom Modern Tile Design Styles
+
+/* Project Card styles */
+.project-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  margin-bottom: 1.75rem;
+
+  /* Image settings */
+  .image {
+    width: 100%;
+    height: 100%; // Ensure it fills the container completely
+    object-fit: cover; // Ensures the image covers the area without stretching
+    transition: transform 0.3s ease-in-out;
+    transform: translate(2%, 0%); // Adjust the center
+  }
+
+  /* Title container settings */
+  .title {
+    position: relative; // Position the title on top of the image
+    opacity: 1; // Initially hide the title
+    color: rgb(36, 36, 36); // color for the title text
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    transition: opacity 0.3s ease-in-out; // Smooth fade-in transition
+    z-index: 2; // Ensure the title is above the image
+  }
+
+  /* Hover effect */
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+
+    /* Darken the background of the card */
+    background-color: rgba(
+      235,
+      235,
+      235,
+      0.6
+    ); // Semi-transparent dark background
+
+    .image {
+      transform: scale(1.1); // Zoom image slightly
+      transform: translate(2%, 0%); // Adjust the center
+    }
+
+    .title {
+      opacity: 1; // Show the title on hover
+    }
+  }
 }
 
 // Flickity - begin
@@ -57,3 +187,24 @@ a.icon > strong {
   width: 100%;
 }
 // Flickity - end
+
+.flex-iframe-container {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.flex-iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.modal-card-foot {
+  background: #fbfbfb;
+}
