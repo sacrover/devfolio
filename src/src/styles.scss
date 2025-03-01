@@ -4,7 +4,7 @@
 @import "~flickity/css/flickity.css";
 
 // Import Lato Google Font
-@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700,900");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
 
 // Update Bulma's global variables
 $family-sans-serif: "Lato", sans-serif;
@@ -126,6 +126,15 @@ a.icon > strong {
     height: 100%;
   }
 }
+
+.bio {
+  font-family: "Lato", sans-serif; /* Use a modern, clean font */
+  font-size: 24px; /* Make it slightly larger */
+  font-weight: 300; /* Thin but readable */
+  line-height: 1.6; /* Improve readability */
+  color: #333; /* Dark gray for contrast */
+}
+
 // Custom Modern Tile Design Styles
 
 /* Project Card styles */

@@ -72,11 +72,13 @@
 
   <section class="section">
     <div class="container">
+      <br>
       <!-- <h1 class="title">About Me</h1> -->
-      <p>I am a robotics and machine learning enthusiast with a graduate specialization in robotics.
-        My experience includes leading visual odometry and autonomous drone racing projects at the University of
-        Toronto. Passionate about building real-world solutions, I am driven to innovate at the intersection of
-        robotics, AI, and simulation technologies.</p>
+      <p class="bio">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+        industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+        scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+        electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release
+        of Letraset sheets containing Lorem Ipsum passages</p>
     </div>
   </section>
 
@@ -138,7 +140,7 @@
             <div class="tile is-parent is-6">
               <article class="tile is-child notification project-card modal-trigger" data-target="project-5-modal">
                 <div class="title">
-                  <p class="title">Visual SLAM in Motion Blur</p>
+                  <p class="title">Visual SLAM in <br>Motion Blur</p>
                 </div>
                 <figure class="image">
                   <img src="img/vslam.gif" alt="Visual SLAM in Motion Blur" />
@@ -151,7 +153,7 @@
                   <p class="title">LiDAR Depth Regularized Gaussian Splatting</p>
                 </div>
                 <figure class="image">
-                  <img src="img/placeholder.jpg" alt="LiDAR Depth Regularized Gaussian Splatting" />
+                  <img src="img/3DGScover.gif" alt="LiDAR Depth Regularized Gaussian Splatting" />
                 </figure>
               </article>
             </div>
@@ -294,10 +296,10 @@
         </div>
         <div class="level-item has-text-centered">
           <div>
-            <a href="https://www.linkedin.com/in/markmacneilhfx" class="icon is-large">
+            <a href="https://www.linkedin.com/in/vermasv" class="icon is-large">
               <i class="fab fa-2x fa-linkedin-in"></i>
             </a>
-            <p class="heading"><a href="https://www.linkedin.com/in/markmacneilhfx">linkedin</a></p>
+            <p class="heading"><a href="https://www.linkedin.com/in/vermasv">linkedin</a></p>
           </div>
         </div>
       </nav>
@@ -488,19 +490,40 @@
       <section class="modal-card-body is-scrollable">
         <div id="project-4-modal-carousel" class="carousel">
           <figure class="image carousel-cell">
-            <img src="img/carousel/1.png">
-          </figure>
-          <figure class="image  carousel-cell">
-            <img src="img/carousel/2.png">
+            <img src="img/carousel/mrta/WarehouseConcept.png ">
+            <figcaption class=" carousel-caption">MRTA Concept diagram</figcaption>
           </figure>
           <figure class="image carousel-cell">
-            <img src="img/carousel/3.png">
+            <img src="img/carousel/mrta/warehouse_graph.png" style="object-fit: contain; width: 100%; height: 100%;">
+            <figcaption class="carousel-caption">Sample graph representation of a warehouse </figcaption>
+          </figure>
+          <figure class="image carousel-cell">
+            <img src="img/carousel/mrta/overlay_map.png" style="object-fit: contain; width: 100%; height: 100%;">
+            <figcaption class="carousel-caption">Graph and Gazebo's Tugbot warehouse layout overlay</figcaption>
+          </figure>
+          <figure class="image carousel-cell flex-iframe-container">
+            <iframe src="https://drive.google.com/file/d/1fV4FItd3-F55rCV_47_x-mx98Nppmx2w/preview"
+              allow="autoplay"></iframe>
+            <figcaption class="carousel-caption" style="background-color: rgb(255, 255, 255);"> <strong>Active duration
+                of robots
+                (over 50
+                tasks)</strong>
+            </figcaption>
+          </figure>
+          <figure class="image  carousel-cell flex-iframe-container">
+            <iframe src="https://drive.google.com/file/d/1TavtWaZZ8KASrij4g7t7vomUoPswesAR/preview"
+              allow="autoplay"></iframe>
+            <figcaption class="carousel-caption" style="background-color: rgb(255, 255, 255);"> <strong>Battery
+                depletion of robots (over 50
+                tasks)</strong>
+            </figcaption>
           </figure>
         </div>
 
         <div class="content">
           <ul>
-            <li>Implemented Adaptive Particle Swarm Optimzation (PSO) to solve the multi-robot task allocation problem
+            <li>Implemented Discrete Adaptive Particle Swarm Optimzation (DAPSO) to solve the multi-robot task
+              allocation problem
               for near-optimal task distribution under realistic constraints.</li>
             <li>Developed a graph-based warehouse model in networkX. This model enabled efficient task allocation and
               smooth path planning for the robots.</li>
@@ -510,7 +533,9 @@
             <li>Integrated a collision avoidance system alongside junction preference logic. This ensured safe and
               efficient navigation through complex layouts with minimal conflicts.</li>
           </ul>
-
+          <br>
+          <br>
+          <br>
 
         </div>
 
@@ -539,12 +564,26 @@
 
         <div id="project-5-modal-carousel" class="carousel">
           <figure class="image carousel-cell">
-            <img src="img/carousel/vslam/kerenelORB.png" ">
+            <img src="img/carousel/vslam/kerenelORB.png">
             <figcaption class=" carousel-caption">Kernel ORB Feature Extraction</figcaption>
           </figure>
           <figure class="image carousel-cell">
             <img src="img/carousel/vslam/dataset.png" style="object-fit: contain; width: 100%; height: 100%;">
             <figcaption class="carousel-caption">Dataset Overview</figcaption>
+          </figure>
+          <figure class="image carousel-cell flex-iframe-container">
+            <iframe src="https://drive.google.com/file/d/1bE9DyTmPTKeO9DBVXhXF9Emy2_zp4_wq/preview"
+              allow="autoplay"></iframe>
+            <figcaption class="carousel-caption" style="background-color: rgb(255, 255, 255);"> <strong>Visual Odometry
+                without Deblurring (Poor tracking during
+                turns)</strong></figcaption>
+          </figure>
+          <figure class="image  carousel-cell flex-iframe-container">
+            <iframe src="https://drive.google.com/file/d/13OTF_qiW_G41wrRZ6lBlE477iP92roZC/preview"
+              allow="autoplay"></iframe>
+            <figcaption class="carousel-caption" style="background-color: rgb(255, 255, 255);"> <strong>Visual Odometry
+                with Deblurring (Good tracking)</strong>
+            </figcaption>
           </figure>
         </div>
 
@@ -563,18 +602,10 @@
                 improvement</strong> in pose
               tracking accuracy with the proposed deblurring pipeline.</li>
           </ul>
-          <hr>
-          <strong>Visual Odometry without Deblurring (Poor tracking during turns)</strong>
-          <div class="flex-iframe-container">
-            <iframe src="https://drive.google.com/file/d/1bE9DyTmPTKeO9DBVXhXF9Emy2_zp4_wq/preview"
-              allow="autoplay"></iframe>
-          </div>
-
-          <strong>Visual Odometry with Deblurring (Good tracking)</strong>
-          <div class="flex-iframe-container">
-            <iframe src="https://drive.google.com/file/d/13OTF_qiW_G41wrRZ6lBlE477iP92roZC/preview"
-              allow="autoplay"></iframe>
-          </div>
+          <br>
+          <br>
+          <br>
+          <br>
         </div>
 
       </section>
@@ -605,14 +636,20 @@
         <div id="project-6-modal-carousel" class="carousel">
           <figure class="carousel-cell">
             <div class="carousel-item">
-              <img src="img/carousel/vslam/dataset.png" style="object-fit: contain; width: 100%; height: 100%;">
-              <figcaption class="carousel-text">Description for first image</figcaption>
+              <img src="img/carousel/3dgs/results.png" style="object-fit: contain; width: 100%; height: 100%;">
+              <figcaption class="carousel-text">RGB and Depth Rendering Comparison</figcaption>
             </div>
           </figure>
           <figure class="carousel-cell">
             <div class="carousel-item">
-              <img src="img/carousel/2.png" style="object-fit: contain; width: 100%; height: 100%;">
-              <figcaption class="carousel-text">Description for second image</figcaption>
+              <img src="img/carousel/3dgs/COLMAP-nuScenes.png" style="object-fit: contain; width: 100%; height: 100%;">
+              <figcaption class="carousel-text">Nuscenes dataset setup for 3DGS </figcaption>
+            </div>
+          </figure>
+          <figure class="carousel-cell">
+            <div class="carousel-item">
+              <img src="img/carousel/3dgs/lidar_depth.png" style="object-fit: contain; width: 100%; height: 100%;">
+              <figcaption class="carousel-text">Depth Estimation with LiDAR dataa</figcaption>
             </div>
           </figure>
         </div>
