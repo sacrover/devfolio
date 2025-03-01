@@ -57,6 +57,7 @@ a.icon > strong {
   flex-direction: column; /* Stack elements vertically on mobile */
   justify-content: flex-start;
   padding: 1rem; /* Optional padding */
+  overflow-y: auto; /* Make content scrollable */
 }
 
 .tag {
@@ -79,16 +80,15 @@ a.icon > strong {
   padding: 0; /* Remove any unnecessary padding */
   margin-top: 0; /* Remove extra margin-top */
   flex-grow: 1; /* Allow content to grow */
-  overflow-y: auto; /* Make content scrollable */
   margin-bottom: 1rem; /* Space between content and the footer */
 }
 
 /* Tablet and Larger Screens */
-@media (min-width: 768px) {
+@media (min-width: 1080px) {
   .modal-card,
   .modal-content {
     margin: 0 auto;
-    max-height: 60%;
+    max-height: 90%;
     width: 50%; /* 80% width for modal */
   }
 
@@ -101,11 +101,13 @@ a.icon > strong {
   /* Left column (carousel + tags) */
   .carousel {
     grid-row: 1 / 2;
+    align-items: center;
     // margin-bottom: 1rem; /* Space between carousel and tags
   }
 
   /* Right column (content) */
   .content {
+    align-items: center;
     position: relative;
     grid-column: 2 / 3;
     grid-row: 1 / 2;
@@ -185,6 +187,7 @@ a.icon > strong {
 // Flickity - begin
 .carousel-cell {
   width: 100%;
+  height: fit-content;
 }
 // Flickity - end
 
@@ -207,4 +210,75 @@ a.icon > strong {
 
 .modal-card-foot {
   background: #fbfbfb;
+}
+
+.carousel-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carousel-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the content horizontally */
+  justify-content: center; /* Vertically centers the image and caption */
+  height: 100%; /* Ensure the cell takes up full height */
+  padding-bottom: 0; /* Remove padding */
+  position: relative; /* To position figcaption at the bottom */
+  overflow: hidden; /* Prevent content overflow */
+}
+
+.carousel-cell img {
+  width: 100%;
+  max-height: 100%; /* Limit the image height, but allow flexibility */
+  object-fit: contain; /* Ensure the image maintains its aspect ratio */
+  margin: 0 auto; /* Center the image */
+  justify-content: center;
+}
+
+.carousel-cell figcaption {
+  width: 100%;
+  font-size: 0.85rem;
+  color: #989898;
+  padding: 0 1.5rem;
+  margin-top: 0; /* Remove any space above the caption */
+  margin-bottom: 0.5rem; /* Space between the caption and the bottom of the container */
+  text-align: center; /* Center the caption text */
+  position: absolute;
+  bottom: 0; /* Fix the caption to the bottom */
+  left: 0;
+  // z-index: 1; /* Ensure it's above other content */
+}
+
+/* Mobile Screens (default) */
+@media (max-width: 767px) {
+  .carousel-cell img {
+    max-height: 60%; /* Slightly reduce image height for mobile */
+  }
+
+  .carousel-cell figcaption {
+    margin-top: 0.5rem; /* Add a little space above the caption for mobile */
+  }
+}
+
+/* Tablet and Larger Screens */
+@media (min-width: 768px) {
+  .carousel-cell img {
+    max-height: 70%; /* Slightly larger image height on tablets */
+  }
+
+  .carousel-cell figcaption {
+    margin-top: 1rem; /* Add more space between image and caption */
+  }
+}
+
+@media (min-width: 1080px) {
+  .carousel-cell img {
+    max-height: 75%; /* Largest image height on desktop */
+  }
+
+  .carousel-cell figcaption {
+    margin-top: 1rem; /* Maintain consistent space between image and caption */
+  }
 }

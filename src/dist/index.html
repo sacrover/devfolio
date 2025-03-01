@@ -265,7 +265,7 @@
 
   <section class="section">
     <div class="container">
-      <h1 class="title">Contact</h1>
+      <!-- <h1 class="title">Contact</h1> -->
       <hr />
       <nav class="level">
         <div class="level-item has-text-centered">
@@ -315,11 +315,12 @@
       <section class="modal-card-body is-scrollable">
 
         <div id="project-1-modal-carousel" class="carousel">
-          <figure class="image is-4by3 carousel-cell">
+          <figure class="image carousel-cell">
             <img src="img/carousel/trailbot/4frames.gif" style="object-fit: contain; width: 100%; height: 100%;">
           </figure>
-          <figure class="image is-4by3 carousel-cell">
+          <figure class="image carousel-cell">
             <img src="img/carousel/trailbot/FSM.png" style="object-fit: contain; width: 100%; height: 100%;">
+            <figcaption class="carousel-caption">Trailbot - State Machine Model</figcaption>
           </figure>
         </div>
         <div class="content">
@@ -382,11 +383,14 @@
             <iframe src="https://drive.google.com/file/d/1lYEanCVTnnnJug5W6WDkEJq7CP8EfkJ-/preview"
               allow="autoplay"></iframe>
           </figure>
-          <figure class="image is-4by3 carousel-cell">
-            <img src="img/carousel/racing/pybullet-sim.png" style="object-fit: contain; width: 100%; height: 100%;">
+          <figure class="image carousel-cell">
+            <img src="img/carousel/racing/pybullet-sim.png" style="object-fit: contain; width: 90%; height: 90%;">
+            <figcaption class="carousel-caption">PyBullet Simulation on different gate sequences</figcaption>
           </figure>
-          <figure class="image is-4by3 carousel-cell">
-            <img src="img/carousel/racing/rrt-planner-uav.png" style="object-fit: contain; width: 100%; height: 100%;">
+          <figure class="image carousel-cell">
+            <img src="img/carousel/racing/rrt-planner-uav.png" style="object-fit: contain; width: 90%; height: 90%;">
+            <figcaption class="carousel-caption">RRT Planner: Snapshots of waypoint refinement between gates
+            </figcaption>
           </figure>
         </div>
 
@@ -398,9 +402,8 @@
             <li>Used <strong>PCHIP spline interpolation</strong> to generate second-order smooth trajectories with
               continuous velocity and acceleration profiles.</li>
             <li>Simulated the drone maneuvers and track timing in <strong>PyBullet</strong> simulator</li>
-            <li>Deployed the trajectory plans and controller on the <strong>Crazyflie firmware</strong> for autonomous
-              navigation
-              through gates avoiding obstacles.</li>
+            <li>Deployed the trajectory plans and controller on the Crazyflie for <strong>real-time</strong> tests (see
+              video).</li>
           </ul>
         </div>
 
@@ -428,14 +431,17 @@
 
 
         <div id="project-3-modal-carousel" class="carousel">
-          <figure class="image is-4by3 carousel-cell">
-            <img src="img/carousel/1.png">
+          <figure class="image carousel-cell">
+            <img src="img/carousel/nav2/result.png">
+            <figcaption class="carousel-caption">Traversability analysis in different scenarios</figcaption>
           </figure>
-          <figure class="image is-4by3 carousel-cell">
-            <img src="img/carousel/2.png">
+          <figure class="image  carousel-cell">
+            <img src="img/carousel/nav2/costmap.png" style="object-fit: contain; width: 95%; height: 95%;">
+            <figcaption class="carousel-caption">Integrated traversability map in Nav2</figcaption>
           </figure>
-          <figure class="image is-4by3 carousel-cell">
-            <img src="img/carousel/3.png">
+          <figure class="image carousel-cell">
+            <img src="img/carousel/nav2/terrain-map.png">
+            <figcaption class="carousel-caption">Live terrain map in RViz</figcaption>
           </figure>
         </div>
 
@@ -443,13 +449,21 @@
           <ul>
             <li>Developed a C++ costmap plugin for Navigation2. The plugin generates costmaps using terrain
               traversability constraints, improving path planning over rough terrains.</li>
-            <li>Implemented a Kalman filter-based map fusion algorithm to refine height estimates of the terrain. This
-              improved costmap accuracy and enhanced navigation safety.</li>
-            <li>Created a real-time terrain structure visualization plugin for RViz. Utilized OGRE3D and custom ROS
-              message types to render detailed surface information.</li>
-            <li>Integrated the plugin with ROS 2 Navigation2 stack. Achieved efficient costmap updates and low-latency
-              visualization for real-time navigation tasks.</li>
+            <li>Implemented <strong>Kalman filter-based map fusion </strong> to refine height estimates of the terrain.
+            </li>
+            <li>Created a real-time terrain structure visualization plugin for RViz. Utilized <strong>OGRE 3D</strong>
+              and
+              custom ROS
+              message types to render surface representation of the scene.</li>
+            <li>Integrated and tested the plugin with ROS 2 Navigation2 stack as an additional traversability costmap
+              layer real-time navigation.</li>
           </ul>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
 
         </div>
 
@@ -473,13 +487,13 @@
       </header>
       <section class="modal-card-body is-scrollable">
         <div id="project-4-modal-carousel" class="carousel">
-          <figure class="image is-4by3 carousel-cell">
+          <figure class="image carousel-cell">
             <img src="img/carousel/1.png">
           </figure>
-          <figure class="image is-4by3 carousel-cell">
+          <figure class="image  carousel-cell">
             <img src="img/carousel/2.png">
           </figure>
-          <figure class="image is-4by3 carousel-cell">
+          <figure class="image carousel-cell">
             <img src="img/carousel/3.png">
           </figure>
         </div>
@@ -524,26 +538,30 @@
       <section class="modal-card-body is-scrollable">
 
         <div id="project-5-modal-carousel" class="carousel">
-          <figure class="image is-4by3 carousel-cell">
-            <img src="img/carousel/vslam/kerenelORB.png" style="object-fit: contain; width: 100%; height: 100%;">
+          <figure class="image carousel-cell">
+            <img src="img/carousel/vslam/kerenelORB.png" ">
+            <figcaption class=" carousel-caption">Kernel ORB Feature Extraction</figcaption>
           </figure>
-          <figure class="image is-4by3 carousel-cell">
+          <figure class="image carousel-cell">
             <img src="img/carousel/vslam/dataset.png" style="object-fit: contain; width: 100%; height: 100%;">
+            <figcaption class="carousel-caption">Dataset Overview</figcaption>
           </figure>
         </div>
 
         <div class="content">
           <ul>
-            <li>Developed a pipeline integrating deep deblurring networks with ORB SLAM3 to improve tracking accuracy in
+            <li>Developed a pipeline integrating deep deblurring networks with ORB SLAM3 to <strong>improve tracking
+                accuracy</strong> in
               visually degraded environments affected by motion blur.</li>
-            <li>Designed and implemented a keypoint filtering algorithm based on blur kernel intensity to enhance
+            <li>Designed and implemented a <strong>keypoint filtering algorithm</strong> based on blur kernel intensity
+              to enhance
               feature matching and tracking in blurry frames.</li>
-            <li>Curated a synthetic dataset in Unity3D to simulate various blur intensities for controlled testing of
+            <li><strong>Curated a synthetic dataset</strong> in Unity3D to simulate various blur intensities for
+              controlled testing of
               deblurring and tracking performance.</li>
-            <li>Conducted benchmark testing on the EuROC MAV dataset, demonstrating up to 45% improvement in pose
+            <li>Conducted benchmark testing on the EuROC MAV dataset, demonstrating up to <strong>45%
+                improvement</strong> in pose
               tracking accuracy with the proposed deblurring pipeline.</li>
-            <li>Reduced tracking loss in ORB SLAM3, achieving robust and stable pose estimation in challenging,
-              blur-prone environments.</li>
           </ul>
           <hr>
           <strong>Visual Odometry without Deblurring (Poor tracking during turns)</strong>
@@ -585,13 +603,20 @@
       <section class="modal-card-body is-scrollable">
 
         <div id="project-6-modal-carousel" class="carousel">
-          <figure class="image is-4by3 carousel-cell">
-            <img src="img/carousel/2.png" style="object-fit: contain; width: 100%; height: 100%;">
+          <figure class="carousel-cell">
+            <div class="carousel-item">
+              <img src="img/carousel/vslam/dataset.png" style="object-fit: contain; width: 100%; height: 100%;">
+              <figcaption class="carousel-text">Description for first image</figcaption>
+            </div>
           </figure>
-          <figure class="image is-4by3 carousel-cell">
-            <img src="img/carousel/2.png" style="object-fit: contain; width: 100%; height: 100%;">
+          <figure class="carousel-cell">
+            <div class="carousel-item">
+              <img src="img/carousel/2.png" style="object-fit: contain; width: 100%; height: 100%;">
+              <figcaption class="carousel-text">Description for second image</figcaption>
+            </div>
           </figure>
         </div>
+
 
         <div class="content">
           <ul>
